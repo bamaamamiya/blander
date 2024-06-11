@@ -25,6 +25,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- meta -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -57,7 +58,8 @@
                         seconddark: '#3F4C49',
                         promo: '#ff0000',
                         hijau: '#0dff00',
-                        kayu: '#ecd7a5'
+                        kayu: '#ecd7a5',
+                        primarybg:'#f7cac9'
                     }
                 }
             }
@@ -84,19 +86,25 @@
 </style>
 </head>
 <body>
-    <div class="bg-gradient-to-b from-primary/50 via-primary/30 to-second h-full">
+    <div class="bg-primarybg h-full">
         <div class="sm:justify-center sm:grid">
             <h1 class="text-5xl font-bold text-center text-primarydark">Blender Portable Mini</h1>
             <h3 class="text-center font-extrabold text-primarysub">Ingin Membuat Jus dengan Mudah dan Dimana Saja?</h3>
         </div>
         <div class="grid justify-center">
-            <img src="https://github.com/bamaamamiya/blander/blob/master/images/p.jpg?raw=true" alt="Blender Portable Mini" class="rounded-xl" />
+            <div class="flex justify-center">
+                <img src="https://github.com/bamaamamiya/blander/blob/master/images/p.jpg?raw=true" alt="Blender Portable Mini" class="rounded-xl" />
+            </div>
             <p class="text-pretty p-2 capitalize font-extrabold text-primary">
                 Blender portable ini adalah kebutuhan untuk membuat jus segar dan sehat di mana saja, terutama saat bepergian. Banyak orang ingin mengonsumsi jus segar tetapi kesulitan menemukan blender yang praktis dan mudah dibawa. Blender konvensional biasanya besar dan memerlukan sumber daya listrik tetap.
             </p>
-            <img src="https://github.com/bamaamamiya/blander/blob/master/images/c.jpg?raw=true" alt="Membuat Jus Mudah" class="rounded-xl"/>
+            <div class="flex justify-center">
+                <img src="https://github.com/bamaamamiya/blander/blob/master/images/c.jpg?raw=true" alt="Membuat Jus Mudah" class="rounded-xl"/>
+            </div>
             <h1 class="text-5xl text-center text-white font-extrabold mt-4">Deskripsi</h1>
-            <img src="https://github.com/bamaamamiya/blander/blob/master/images/shefuckybitch.png?raw=true" alt="Blender Portable Mini Deskripsi" />
+            <div class="flex justify-center">
+                <img src="https://github.com/bamaamamiya/blander/blob/master/images/shefuckybitch.png?raw=true" alt="Blender Portable Mini Deskripsi" />
+            </div>
             <div class="grid justify-center text-center text-primary font-bold text-2xl space-y-2 p-2 shadow-xl rounded-xl">
                 <p>Mudah dibawa ke mana saja karena ukurannya yang kecil dan ringan.</p>
                 <p>Bisa membuat jus dalam waktu sekitar 10 detik.</p>
@@ -108,7 +116,9 @@
             <br><br>
             
             <div class="text-center text-primary text-2xl grid justify-center">
-                <img src="https://github.com/bamaamamiya/blander/blob/master/images/travel.jpeg?raw=true" alt="Blender Portable untuk Bepergian" class="rounded-md"/>
+                <div class="flex justify-center">
+                    <img src="https://github.com/bamaamamiya/blander/blob/master/images/travel.jpeg?raw=true" alt="Blender Portable untuk Bepergian" class="rounded-md"/>
+                </div>
                 <h1 class="text-5xl text-center text-primary font-extrabold">Cocok untuk:</h1>
                 <a>Orang-orang yang sering bepergian dan tetap ingin menikmati jus segar.</a>
                 <a>Pekerja kantoran yang ingin membawa blender ke tempat kerja.</a>
@@ -142,20 +152,13 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-center ">
-                <div class="text-center p-8 rounded-lg rounded-xl">
-                    <h1 class="text-3xl font-bold mb-4">Promo Berakhir Dalam:</h1>
-                    <div id="countdown" class="countdown flex justify-center text-2xl font-semibold">
-                        <div class="countdown-box">
-                            <div id="minutes" class="countdown-time"></div>
-                        </div>
-                        <div class="countdown-box">
-                            <div id="seconds" class="countdown-time"></div>
-                        </div>
-                    </div>
-                </div>
-            
-            </div>
+        <!-- CTA -->
+        <div class="flex justify-center items-center">
+            <button class="bg-green-400 rounded-xl p-2 text-white justify-center gap-2">
+                <i class="fab fa-whatsapp"></i>
+                Pesan Sekarang !🔥</button>
+        </div>
+        <!-- CTA END -->
 
 
             <div class="grid justify-center space-y-2">
@@ -172,31 +175,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const startCountdown = () => {
-            const countdownElement = document.getElementById('countdown');
-            let countdownTime = 100 * 60 * 1000; // 10 minutes in milliseconds
-            const interval = 1000; // 1 second in milliseconds
-
-            const updateCountdown = () => {
-                const minutes = Math.floor((countdownTime / (1000 * 60)) % 60);
-                const seconds = Math.floor((countdownTime / 1000) % 60);
-
-                document.getElementById('minutes').textContent = `${minutes} Menit`;
-                document.getElementById('seconds').textContent = `${seconds} Detik`;
-
-                if (countdownTime <= 0) {
-                    countdownTime = 10 * 60 * 1000; // Reset to 10 minutes
-                } else {
-                    countdownTime -= interval;
-                }
-            };
-
-            setInterval(updateCountdown, interval);
-        };
-
-        startCountdown();
-    </script>
 </body>
 </html>
