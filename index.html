@@ -111,6 +111,22 @@
         .nav-btn.right {
             right: 10px;
         }
+
+        .countdown-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .countdown-timer {
+            font-size: 2rem;
+            font-weight: bold;
+        }
 </style>
 </head>
 <body>
@@ -120,7 +136,7 @@
         <div class="grid justify-center items-center text-center space-y-2">
             <div class="bg-black text-white">
                 <h1 class="text-3xl font-bold m-2">Rahasia Kulit Bersih dan Sehat? Jus Segar dengan Portable Juicer!</h1>
-                <h2 class="text-2xl font-semibold m-4">Mudah digunakan, praktis dibawa, dan sempurna untuk rutinitas kecantikan Anda</h2>
+                <h2 class="font-semibold m-4">Mudah digunakan, praktis dibawa, dan sempurna untuk rutinitas kecantikan Anda</h2>
                 <div class="justify-center items-center flex" >
             </div>
                 <div class="showcase">
@@ -152,16 +168,6 @@
             <button class="nav-btn right next-testimonial">❯</button>
         </div>
 
-<!-- 
-        <div class="grid justify-center items-center">
-            <img src="https://raw.githubusercontent.com/bamaamamiya/blander/master/images/COD.webp" alt="ongkir">
-            <div class="text-5xl flex justify-between animate-bounce p-4">
-                <i class="fa-solid fa-arrow-right rotate-90"></i>
-                <i class="fa-solid fa-arrow-right rotate-90"></i>
-                <i class="fa-solid fa-arrow-right rotate-90"></i>
-            </div>
-        </div> -->
-
         <div class="grid justify-center items-center space-y-2 bg-abu" >
                 <img src="https://raw.githubusercontent.com/bamaamamiya/blander/de864aab359b8f169346c50e92a80405fa5540b7/images/product.webp" alt="product2"/>
                 <div class="grid">
@@ -185,13 +191,6 @@
                 </div>
             </div>
 
-
-<!-- 
-            <div class="grid justify-center items-center" >
-                <a href="https://thruvshop.orderonline.id/portable-juicer" target="_blank" class="flex justify-center items-center">
-                    <button class="text-md bg-black text-white p-4 rounded-md text-center">Pesan Sekarang !</button>
-                </a>
-            </div> -->
             
             <div class="bg-abu grid justify-center items-center">
                 <p>
@@ -210,6 +209,13 @@
             </div>
 
 <div class="grid items-center justify-center">
+<div>
+    <div class="countdown-container">
+        <h2>Promo Berakhir Dalam</h2>
+        <div id="countdown" class="countdown-timer text-red-600"></div>
+    </div>
+</div>
+
     <p class="text-3xl font-semibold text-center">Cara Belanja Sangat Mudah</p>
     <p class="text-center">Anda Cukup ISI Form Di bawah ini Bisa COD (BAYAR KETIKA BARANG SAMPAI ) / TRANFERS</p>
     <div class="text-5xl flex justify-between animate-bounce p-1">
@@ -232,12 +238,14 @@
     <i class="fa-solid fa-arrow-right -rotate-90"></i>
 </div>
 <p class="text-center text-2xl font-semibold">Silakan isi data Form di atas ini Untuk melakukan Pemesanan</p>
-<img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hXRebEABzOK5IbhXWK8128DFJRT1HSGiRoZZa5jhS0g.jpg" alt="kurir"/>
-<img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hXdvAoqFCe3O0kdhXWA7nxWyiTuMbR5671pfj6lzx1A.jpg" alt="kurir"/>
-<img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hXdbs130CSx0diQQhXWATyeguPBoQoWSZ6NNVDxaYZh5Q.png" alt="kurir"/>
-<img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hjjZbJ70hs1kxsAahjXsrwpPU9E8uMSD6h1BuRrtlbA.jpg" alt="kurir"/>
-<img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hjjgNZrcCysus8FhjXsgAIHX7gmWnVQP6rxIF11kYuQ.jpg" alt="kurir"/>
-
+<div>
+    <img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hXRebEABzOK5IbhXWK8128DFJRT1HSGiRoZZa5jhS0g.jpg" alt="kurir"/>
+    <img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hXdvAoqFCe3O0kdhXWA7nxWyiTuMbR5671pfj6lzx1A.jpg" alt="kurir"/>
+    <img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hXdbs130CSx0diQQhXWATyeguPBoQoWSZ6NNVDxaYZh5Q.png" alt="kurir"/>
+    <img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hjjZbJ70hs1kxsAahjXsrwpPU9E8uMSD6h1BuRrtlbA.jpg" alt="kurir"/>
+    <img src="https://brdsg.com/img/600/bq7l6jf6bq7r6th5vg_1/hjjgNZrcCysus8FhjXsgAIHX7gmWnVQP6rxIF11kYuQ.jpg" alt="kurir"/>
+</div>
+    
 </div>
 
             <div>
@@ -350,6 +358,34 @@
 
     createSlider('showcase-slide', 'prev-showcase', 'next-showcase');
     createSlider('testimonial-slide', 'prev-testimonial', 'next-testimonial');
+</script>
+
+<script>
+    function startCountdown(duration, display) {
+        let timer = duration, hours, minutes, seconds;
+        const interval = setInterval(function () {
+            hours = parseInt(timer / 3600, 10);
+            minutes = parseInt((timer % 3600) / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(interval);
+                display.textContent = "EXPIRED";
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        const oneDay = 5 * 60 * 60; // 24 hours in seconds
+        const display = document.querySelector('#countdown');
+        startCountdown(oneDay, display);
+    };
 </script>
 </body>
 </html>
